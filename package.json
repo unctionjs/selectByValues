@@ -1,0 +1,64 @@
+{
+  "name": "@unction/selectbyvalue",
+  "version": "1.0.0",
+  "description": "Produces the set or subset based on a predicate run with each value",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "contributors": [
+    {
+      "name": "Kurtis Rainbolt-Greene",
+      "email": "kurtis@rainbolt-greene.online",
+      "url": "https://kurtis.rainbolt-greene.online"
+    }
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/unctionjs/selectByValue#readme",
+  "repository": "github:unctionjs/selectByValue",
+  "bugs": "https://github.com/unctionjs/selectByValue/issues",
+  "main": "transpiled/index.js",
+  "files": [
+    "transpiled/index.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "test": "NODE_ENV=test jest --coverage './test.js'",
+    "build": "babel './index.js' -d './transpiled/'",
+    "lint": "eslint './index.js'",
+    "check": "flow-typed install && flow check",
+    "ci": "npm run test",
+    "watch": "chokidar './index.js' './test.js' --command 'npm run ci --silent'"
+  },
+  "devDependencies": {
+    "@unction/streamsatisfies": "5.0.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.3",
+    "babel-jest": "23.0.0",
+    "babel-plugin-module-resolver": "3.0.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-flow": "6.23.0",
+    "chokidar-cli": "1.2.0",
+    "eslint": "4.13.1",
+    "eslint-find-new-rules": "2.0.2",
+    "eslint-find-rules": "3.1.1",
+    "eslint-import-resolver-babel-module": "4.0.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-flowtype": "2.40.1",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-promise": "3.6.0",
+    "flow": "0.2.3",
+    "flow-bin": "0.61.0",
+    "flow-typed": "2.2.3",
+    "jest": "23.0.0",
+    "most": "1.7.2"
+  },
+  "dependencies": {
+    "@unction/attach": "5.0.0",
+    "@unction/fresh": "6.0.0",
+    "@unction/reducewithvaluekey": "10.1.0"
+  }
+}

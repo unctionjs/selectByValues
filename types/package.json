@@ -1,0 +1,29 @@
+{
+  "name": "@unction/_types",
+  "version": "1.0.0",
+  "description": "A bunch of types",
+  "keywords": [
+    "unction",
+    "functional"
+  ],
+  "contributors": [
+    {
+      "name": "Kurtis Rainbolt-Greene",
+      "email": "kurtis@rainbolt-greene.online",
+      "url": "https://kurtis.rainbolt-greene.online"
+    }
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/unctionjs/_types#readme",
+  "repository": "github:unctionjs/_types",
+  "bugs": "https://github.com/unctionjs/_types/issues",
+  "scripts": {
+    "check": "flow check"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "flow": "0.2.3",
+    "flow-bin": "0.51.1",
+    "flow-typed": "2.1.5"
+  }
+}
