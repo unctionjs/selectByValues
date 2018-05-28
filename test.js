@@ -6,8 +6,8 @@ import selectByValue from "./index"
 
 const isOdd = (value) => value % 2 !== 0
 
-test("Array", ({same, end}) => {
-  same(
+test("Array", () => {
+  expect(
     selectByValue(
       isOdd
     )([
@@ -15,18 +15,17 @@ test("Array", ({same, end}) => {
       2,
       3,
       4,
-    ]),
+    ])
+  ).toEqual(
     [
       1,
       3,
     ]
   )
-
-  end()
 })
 
-test("Object", ({same, end}) => {
-  same(
+test("Object", () => {
+  expect(
     selectByValue(
       isOdd
     )({
@@ -34,18 +33,17 @@ test("Object", ({same, end}) => {
       bbb: 2,
       ccc: 3,
       ddd: 4,
-    }),
+    })
+  ).toEqual(
     {
       aaa: 1,
       ccc: 3,
     }
   )
-
-  end()
 })
 
-test("Set", ({same, end}) => {
-  same(
+test("Set", () => {
+  expect(
     selectByValue(
       isOdd
     )(new Set([
@@ -53,18 +51,17 @@ test("Set", ({same, end}) => {
       2,
       3,
       4,
-    ])),
+    ]))
+  ).toEqual(
     new Set([
       1,
       3,
     ])
   )
-
-  end()
 })
 
-test("Map", ({same, end}) => {
-  same(
+test("Map", () => {
+  expect(
     selectByValue(
       isOdd
     )(new Map([
@@ -84,7 +81,8 @@ test("Map", ({same, end}) => {
         "d",
         4,
       ],
-    ])),
+    ]))
+  ).toEqual(
     new Map([
       [
         "a",
@@ -96,23 +94,19 @@ test("Map", ({same, end}) => {
       ],
     ])
   )
-
-  end()
 })
 
-test("Stream", ({equal, doesNotThrow, end}) => {
+test("Stream", () => {
+  expect.assertions(3)
+
   streamSatisfies(
     [1, 3]
   )(
-    (given) => (expected) => equal(given, expected)
+    (given) => (expected) => expect(given).toEqual(expected)
   )(
-    doesNotThrow
+    () => true
   )(
-    ({length}) => (size) => {
-      equal(length, size)
-
-      end()
-    }
+    ({length}) => (size) => expect(length).toEqual(size)
   )(
     selectByValue(
       isOdd
