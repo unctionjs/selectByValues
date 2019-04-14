@@ -1,10 +1,10 @@
 /* eslint-disable flowtype/require-variable-type, no-magic-numbers */
-import {from} from "most"
-import streamSatisfies from "@unction/streamsatisfies"
+import {from} from "most";
+import streamSatisfies from "@unction/streamsatisfies";
 
-import selectByValue from "./index"
+import selectByValue from "./index";
 
-const isOdd = (value) => value % 2 !== 0
+const isOdd = (value) => value % 2 !== 0;
 
 test("Array", () => {
   expect(
@@ -21,8 +21,8 @@ test("Array", () => {
       1,
       3,
     ]
-  )
-})
+  );
+});
 
 test("Object", () => {
   expect(
@@ -39,8 +39,8 @@ test("Object", () => {
       aaa: 1,
       ccc: 3,
     }
-  )
-})
+  );
+});
 
 test("Set", () => {
   expect(
@@ -57,8 +57,8 @@ test("Set", () => {
       1,
       3,
     ])
-  )
-})
+  );
+});
 
 test("Map", () => {
   expect(
@@ -93,11 +93,11 @@ test("Map", () => {
         3,
       ],
     ])
-  )
-})
+  );
+});
 
 test("Stream", () => {
-  expect.assertions(3)
+  expect.assertions(3);
 
   streamSatisfies(
     [1, 3]
@@ -116,5 +116,5 @@ test("Stream", () => {
       3,
       4,
     ]))
-  )
-})
+  );
+});
