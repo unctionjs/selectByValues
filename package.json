@@ -1,6 +1,6 @@
 {
   "name": "@unction/selectbyvalue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Produces the set or subset based on a predicate run with each value",
   "keywords": [
     "unction",
