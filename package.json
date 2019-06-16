@@ -60,9 +60,9 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/attach": "7.5.0",
-    "@unction/fresh": "8.5.0",
-    "@unction/reducewithvaluekey": "11.5.0"
+    "@unction/attach": "7.6.0",
+    "@unction/fresh": "8.6.0",
+    "@unction/reducewithvaluekey": "11.6.0"
   },
   "module": "module.js",
   "browser": "browser.js",
