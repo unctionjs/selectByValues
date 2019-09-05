@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateFunctionType => EnumerableType => EnumerableType
+> PredicateFunctionType<A> => EnumerableType<A> => EnumerableType<A>
 
 Given an enumerable and a predicate and produce the set or subset of that based on the predicate matched to the values.
 
