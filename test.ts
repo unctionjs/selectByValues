@@ -2,7 +2,7 @@
 import {from} from "most";
 import streamSatisfies from "@unction/streamsatisfies";
 
-import selectByValue from "./";
+import selectByValue from "./index.ts";
 
 const isOdd = (value) => value % 2 !== 0;
 
