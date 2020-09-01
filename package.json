@@ -66,8 +66,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "@unction/attach": "7.10.0",
-    "@unction/fresh": "8.9.1",
-    "@unction/reducewithvaluekey": "11.10.0"
+    "@unction/attach": "^7.11.0",
+    "@unction/fresh": "^8.11.0",
+    "@unction/reducewithvaluekey": "^11.11.0"
   }
 }
